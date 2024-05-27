@@ -7,4 +7,10 @@ else
 echo "u r a root user"
 fi
 yum install git -y
+if [ $? == 0 ]
+then
+echo "mysql is installed successfully"
+else
+echo "git is not installed successfully"
+fi
 
