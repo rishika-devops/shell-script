@@ -1,3 +1,4 @@
+#!/bin/bash
 TODAY=$1
 if [ $TODAY == "sunday" ]
 then 
