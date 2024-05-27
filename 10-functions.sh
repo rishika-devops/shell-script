@@ -16,7 +16,7 @@ fi
 validate() {
 if [ $1 == 0 ]
 then
-echo -e "$G $2 is  successfully"
+echo -e "$G $2 is  successful"
 else
 echo -e "$R  $2 is not  successful $N"
 fi
