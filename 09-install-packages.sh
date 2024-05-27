@@ -5,6 +5,6 @@ then
 echo "u r not a root user"
 else 
 echo "u r a root user"
-yum install git -y
 fi
+yum install git -y
 
