@@ -1,4 +1,6 @@
 #!/bin/bash
+TIMESTAMP=$(date +%D-%H-%M-%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 ID=$(id -u)
 if [ $ID != 0 ]
 then
@@ -14,7 +16,9 @@ else
 echo "$2 is not installed successfully"
 fi
 }
-yum install git -y
+yum install git -y &>> $LOGFILE
 validate $? "installing git...."
-yum install mysql -y
-validate $? "installing mysql...."
+yum install mysql -y &>> $LOGFILE
+validate $? "installing mysql...." 
+
+
