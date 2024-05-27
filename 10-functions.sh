@@ -16,9 +16,9 @@ fi
 validate() {
 if [ $1 == 0 ]
 then
-echo "$G $2 is installed successfully"
+echo -e "$G $2 is  successfully"
 else
-echo "$R  $2 is not installed successfully $N"
+echo -e "$R  $2 is not  successful $N"
 fi
 }
 yum install git -y &>> $LOGFILE
