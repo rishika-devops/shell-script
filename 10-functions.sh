@@ -1,5 +1,5 @@
 #!/bin/bash
-TIMESTAMP=$(date +%D-%H-%M-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 ID=$(id -u)
 if [ $ID != 0 ]
