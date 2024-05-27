@@ -16,7 +16,7 @@ fi
 validate() {
 if [ $1 == 0 ]
 then
-echo "$2 is installed successfully"
+echo "$G $2 is installed successfully"
 else
 echo "$R  $2 is not installed successfully $N"
 fi
