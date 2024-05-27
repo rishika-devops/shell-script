@@ -2,8 +2,7 @@
 username=$1
 password=$2
 echo "pls enter ur username:"
-read username
-echo "username is $username"
+read -s username
 echo "pls enter ur password:"
-read password
-echo "password is $password"
+read -s password
+echo " username is: $username.........password is $password"
