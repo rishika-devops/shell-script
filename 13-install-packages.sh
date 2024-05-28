@@ -13,6 +13,7 @@ validate(){
     echo -e "$R $2 is failed $N"
     else
     echo -e "$G $2 is successful $N"
+    fi
 }
 
 ID=$(id -u)
