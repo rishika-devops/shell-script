@@ -4,7 +4,7 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOGFILE="/tmp/$0-$TIMESTAMP.log
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 echo "script started executing at $TIMESTAMP"
 echo "arguments passed: $@"
 validate() {
