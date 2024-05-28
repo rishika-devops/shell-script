@@ -34,4 +34,5 @@ yum install $package -y &>> $LOGFILE
 validate $? "installing $package"
 else
 echo -e "$Y $package is already installed"
+fi
 done
