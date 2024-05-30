@@ -2,7 +2,7 @@
 DISK_USAGE=$(df -hT | grep -i xfs)
 DISK_THRESHOLD=1
 message=""
-while IFS = read line
+while IFS= read line
 do
 USAGE=$(echo $line | awk '{print $6F}' | cut -d % -f1)
 partition=$(echo $line | awk '{print $1F}')
