@@ -12,7 +12,7 @@ message+="high disk usage on $partition:$USAGE <br>"
 fi
 done <<< $DISK_USAGE
 echo "message: $message"
-sh mail.sh "devops team" "high disk usage" "$message" "jujjurisowjanya@gmail.com" "alert high disk usage"
+sh mail.sh "devops team" "high disk usage" "$message" "jujjurisowjanya@gmail.com" "ALERT high disk usage"
 
 
 
