@@ -17,7 +17,7 @@ while getopts ":n:w:h" opt; do
         h ) USAGE; exit;;
       esac
     done
-if [  -Z "$NAME" ]
+if [  -Z "$NAME" ] ;
 then 
 echo "error:: -n: name is mandatory"
 USAGE
