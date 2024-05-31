@@ -1,5 +1,5 @@
 #!/bin/bash
-SOURCE="/tmp/shellscript-logs"
+SOURCE="/tmp/shellscript"
 if [ ! -d "$SOURCE" ]; then
   echo "$SOURCE does not exist"
 fi
