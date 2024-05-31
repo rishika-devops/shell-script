@@ -1,5 +1,4 @@
 
-
 #!/bin/bash
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
@@ -44,9 +43,9 @@ ISROOTUSER() {
 IS_PACKAGE_INSTALLED() {
     echo "checking if package is installed"
     # yum list available $1 # this checks and lists package detail from repositories when the package is not installed so not very instrumental
-    yum info $1 >/dev/null 2>&1
 
-    if [ $? -eq 0 ]; then # If the package is installed
+    yum list installed | grep $1 #this checks for installed package
+    if [ $? -eq 0 ]; then        # If the package is installed
         ECHO_PROCESS $Y "$1 is installed, skipping"
         return 1
     else # If the package is not installed
@@ -72,7 +71,7 @@ IS_PACKAGE_INSTALLED() {
 IS_VALID_PACKAGE() {
     echo "checking if package is valid"
     # yum list available $1 # this checks and lists package detail from repositories when the package is not installed so not very instrumental
-    yum info $1 >/dev/null 2>&1
+    yum info $1 >/dev/null 2>&1 #this checks if package name is valid to install
     if [ $? -eq 0 ]; then #    if [$# -gt 0] you need spaces
         ECHO_PROCESS $G "$1 is valid"
         IS_PACKAGE_INSTALLED $1
@@ -105,9 +104,12 @@ INSTALL_PACKAGES() {
         ECHO_PROCESS $R "Number of packages is $# - No packages to install" # Print an error message if no packages are provided
         exit 1                                                              # Exit with a status code of 1
     fi
+    ECHO_PROCESS $G "Installation of packages is complete" # Print a message indicating the installation is complete
 }
 
 ISROOTUSER
 INSTALL_PACKAGES "$@"
+
+
 
 
