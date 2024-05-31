@@ -1,24 +1,27 @@
+#!/bin/bash
 NAME=""
 WISHES="good morning"
 USAGE(){
-    SCRIPT=$(basename $0)
-    echo "$SCRIPT :: USAGE"
-    echo "-n name(name is mandatory)"
-    echo "-w wishes(wishes optional)"
+    echo "usage:: $(basename $0) -n name -w wishes"
+    echo "options::"
+    echo "-n, specify the name(name is mandatory)"
+    echo "-w, specify thewishes(wishes optional) default is good morning"
+    echo "-h, display help and exit"
 }
 while getopts ":n:w:h" opt; do
       case $opt in
-        a ) NAME="$OPTARG";;
-        b ) WISHES="$OPTARG";;
-        h|* ) CHERRY="$OPTARG";;
-        \?) echo "Invalid option: -"$OPTARG"" >&2
+        n ) NAME="$OPTARG";;
+        w ) WISHES="$OPTARG";;
+        \?) echo "Invalid option: -"$OPTARG"" >&2 ; USAGE; exit;;
             exit 1;;
-        : ) echo "Option -"$OPTARG" requires an argument." >&2
-            exit 1;;
+        : ) USAGE; exit;;
+        h ) USAGE; exit;;
       esac
     done
-if [ ! -n NAME ]
+if [  -Z "$NAME" ]
 then 
-echo "-n: name is mandatory"
+echo "error:: -n: name is mandatory"
+USAGE
+exit 1
 fi
 echo " hello $NAME........$WISHES.....r u leaning devops"
