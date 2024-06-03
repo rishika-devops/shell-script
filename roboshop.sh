@@ -6,7 +6,7 @@ ZONE_ID=Z0576904QSLDCSU67T62
 DOMAIN_NAME="sowjanyaaws.online"
 for i in "${INSTANCES[@]}"
 do
-if [ $i=="mongodb" || $i=="mysql" || $i=="shipping" ]
+if [ $i=="mongodb" ] || [ $i=="mysql" ] || [ $i=="shipping" ]
 then
 INSTANCE_TYPE="t3.small"
 else
