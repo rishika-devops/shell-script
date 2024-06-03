@@ -23,11 +23,11 @@ aws route53 change-resource-record-sets \
     ,"Changes": [{
       "Action"              : "UPSERT"
       ,"ResourceRecordSet"  : {
-        "Name"              : "' $i '.' $DOMAIN_NAME '"
+        "Name"              : "'$i'.'$DOMAIN_NAME'"
         ,"Type"             : "A"
         ,"TTL"              : 1
         ,"ResourceRecords"  : [{
-            "Value"         : "' $IP_ADDRESS '"
+            "Value"         : "'$IP_ADDRESS'"
         }]
       }
     }]
