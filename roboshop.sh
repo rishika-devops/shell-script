@@ -1,5 +1,5 @@
 #!/bin/bash
-AMI=ami-0f3c7d07486cad139
+AMI=ami-0b4f379183e5706b9
 SG_ID=sg-05a37f712512f2d63
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
 ZONE_ID=Z0576904QSLDCSU67T62
